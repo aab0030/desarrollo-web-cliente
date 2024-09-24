@@ -1,9 +1,4 @@
 var nombre;
+nombre = prompt("Nombre: ");
 
-function pedirDatos(){
-    prompt("Nombre: ");
-}
-
-function saludoUsuario(){
-    alert("Bienvenido a mi pagina "+nombre);
-}
+alert("Bienvenido a mi pagina "+nombre);
