@@ -6,8 +6,11 @@ function countBy(x, y){
 
 function getMult(n1, n2){
     let count = 1;
-    let res = [];
+    let res = [1];
     while (count <= n2){
-        res = count * n1;
+        res[count]= count * n1;
+        count++;
     }
+    return res;
 }
+countBy(2,3);
