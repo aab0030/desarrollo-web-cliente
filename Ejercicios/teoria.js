@@ -72,3 +72,21 @@ let otro = res.map((ele)=>{
 
 
 //console.log(res);
+
+//Métodos para cadenas
+
+let texto = "hola";
+
+texto.length // Propiedad que muestra la longitud de una cadena
+
+texto.toUpperCase(); // Devuelve todo el string a mayúscula 
+texto.toLowerCase(); // Devuelve todo el string a minúscula 
+
+texto.charAt(pos); // Devuelve el caracter en la posición dada por parametros
+
+texto.indexOf('a'); // Devuelve la posicion de la cadena pasada por parametros
+texto.lastIndexOf('a'); // Devuelve la última posicion de la cadena pasada por parametros
+
+texto.substring(3,5); // Devuelve un trozo del string, desde la primera posición hasta la ultimo sin incluirla
+
+lista = texto.split('a'); // Devuelve un array con el texto dividido por el caracter pasado por parametros 
