@@ -1,14 +1,11 @@
-window.onload = main;
-
-function main() {
-    
-}
-
 function cambiar() {
-    caja = document.getElementsByTagName("p")[1].getAttribute("class");
+    let cajas = document.getElementsByTagName("p");
+    let caja2 = cajas[1];
+    let caja1 = cajas[0];
 
-}
+    let claseCaja2 = caja2.getAttribute("class");
+    let claseCaja1 = caja1.getAttribute("class");
 
-function cambiar2() {
-    
+    caja1.setAttribute("class",claseCaja2);
+    caja2.setAttribute("class",claseCaja1);
 }
