@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difuminada</title>
+    <style>
+        img{
+            /*filter: blur(25px);*/
+            z-index: 0;
+        }
+        h1{
+            position: absolute;
+            z-index: 1;
+            top: 125px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SPOILER</h1>
+    <img src="logo.jpg" alt="foto jaime" style="filter: blur(25px);">
+    <button>Mostrar</button>
+</body>
+</html>
+
+<script>
+
+document.images[0].style.filter = "blur(5px)";
+   console.log(document.images[0].style.filter);
+    
+</script>
