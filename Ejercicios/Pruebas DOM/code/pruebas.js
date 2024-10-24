@@ -30,3 +30,38 @@ function main() {
     2) GET y SET 
     3) Atributos que tienen todas las etiquetas
 */
+
+/*
+    Acceso atributos css
+*/
+
+window.onload = function() {
+
+    let listaDiv = document.getElementsByTagName("div");
+
+    for (let divito of listaDiv) {
+        divito.onmouseover = function () {
+            let estilos = window.getComputedStyle(this);
+            let color = estilos.getPropertyValue("background-color");
+
+            document.body.style.setProperty("background-color", color);
+        }
+    }
+}
+
+/**
+ *  DEVUELVE EL TAMAÑO PERO SIN CONTAR EL BORDE Y EL MARGIN
+ * .clientWIdth
+ * .clientHeight
+ * 
+ *  DEVUELVE EL TAMAÑO CONTANDO EL BORDE Y EL MARGIN ¿?
+ * .offsetWidth
+ * .offsetHeight
+ * 
+ *  screen PANTALLA DEL USUARIO
+ *  .width
+ *  .height RESOLUCION DEL DISPOSITIVO
+ * 
+ *  .availWidth
+ *  .availHeight
+ */
