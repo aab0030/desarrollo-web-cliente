@@ -26,7 +26,22 @@
 
 <script>
 
-document.images[0].style.filter = "blur(5px)";
-   console.log(document.images[0].style.filter);
-    
+    document.images[0].style.filter = "blur(25px)";
+    console.log(document.images[0].style.filter);
+
+
+    let boton = document.getElementsByTagName("button")[0];
+    boton.onclick = function(){
+        if (document.images[0].style.filter != "none") {
+            document.images[0].style.filter = "none";
+            let h1 = document.getElementsByTagName("h1")[0];
+            h1.style.zIndex = -1;
+            boton.textContent = "Ocultar";
+        }else{
+            document.images[0].style.filter = "blur(25px)";
+            let h1 = document.getElementsByTagName("h1")[0];
+            h1.style.zIndex = 1;
+            boton.textContent = "Mostrar";
+        }
+    }
 </script>
