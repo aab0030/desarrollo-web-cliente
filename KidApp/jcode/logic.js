@@ -14,9 +14,9 @@ window.onload = function (){
     */ 
     let main = document.querySelector("main");
     console.log(main);
-    window.onclick = function(){
+    window.onclick = function(element){
         cont = changeBg(cont);
-        createFigure();
+        createFigure(element.clientX,element.clientY);
     }
     
 }
@@ -29,4 +29,8 @@ function changeBg(cont){
     let main = document.querySelector("main");
     main.style.backgroundColor = fondos[cont];
     return cont;
+}
+
+function createFigure(positionX, positionY) {
+    
 }
