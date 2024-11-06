@@ -38,7 +38,7 @@ function createFigure(positionX, positionY) {
     let bloque = document.createElement("div");
     let main = document.querySelector("main");
     let tamano = main.clientWidth / 10;
-    let posicion = [positionX - tamano / 2 + "px", positionY - 100 + "px"];
+    let posicion = [positionX - tamano / 2 + "px", positionY - tamano / 2 + "px"];
 
     bloque.setAttribute("style","position:absolute;width:"+tamano+"px;height:"+tamano+"px;background-color:white;border:1px solid black;top:"+posicion[1]+";left:"+posicion[0]+";");
 
