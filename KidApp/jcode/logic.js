@@ -12,13 +12,16 @@ window.onload = function (){
         let main = document.getElementsByTagName("main")[0];
         main.appendChild(nodoDiv);
     */ 
-    let main = document.querySelector("main");
-    console.log(main);
+    
     window.onclick = function(element){
         cont = changeBg(cont);
+    }
+    window.onmousedown = function(element){
         createFigure(element.clientX,element.clientY);
     }
-    
+    window.onmouseup = function(){
+        deletefigure();
+    }
 }
 
 function changeBg(cont){
@@ -32,5 +35,29 @@ function changeBg(cont){
 }
 
 function createFigure(positionX, positionY) {
-    
+    let bloque = document.createElement("div");
+    let main = document.querySelector("main");
+    let tamano = main.clientWidth / 10;
+    let posicion = [positionX - tamano / 2 + "px", positionY - 100 + "px"];
+
+    bloque.setAttribute("style","position:absolute;width:"+tamano+"px;height:"+tamano+"px;background-color:white;border:1px solid black;top:"+posicion[1]+";left:"+posicion[0]+";");
+
+    if (Math.random() < 0.5) {
+        bloque.style.borderRadius = "240px";
+    }
+    bloque.style.backgroundColor = ccolores[parseInt(Math.random()*ccolores.length)];
+
+    main.appendChild(bloque);
+
+    window.onmousemove = function(element){
+        bloque.style.top = element.clientY - tamano/2 + "px";
+        bloque.style.left = element.clientX - tamano/2 + "px";
+    }
+}
+
+function deletefigure(){
+    let bloque = document.querySelector("div");
+    let nodoPadre = bloque.parentNode;
+
+    nodoPadre.removeChild(bloque);
 }
