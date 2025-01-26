@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Enchanted";
+    src: url("../fonts/Enchanted_Land.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Enchanted";
+    overflow: hidden;
+}
