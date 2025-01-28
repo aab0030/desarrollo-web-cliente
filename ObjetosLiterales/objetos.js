@@ -7,12 +7,11 @@ window.onload = function () {
         mostrar: function () {
             let info = Object.values(this);
             info = info.filter((info) => typeof(info) === "string");
-            let texto;
+           
+            let texto = "";
             for(element of info){
                 texto += element + "\n";
             }
-            console.log(texto);
-            
         }
     };
     

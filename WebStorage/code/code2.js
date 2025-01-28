@@ -8,4 +8,10 @@ window.onload = function () {
     
     let div = document.getElementsByTagName("div")[0];
     div.textContent = "Tu contraseña es " + clave;
+
+    let btnBorrar = document.getElementsByTagName("button")[0];
+    btnBorrar.addEventListener("click", function () {
+        localStorage.clear();
+        location.reload();
+    });
 }
